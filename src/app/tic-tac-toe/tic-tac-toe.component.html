@@ -1,1 +1,12 @@
-<p>tic-tac-toe works!</p>
+<h1>Current Player: {{currentPlayer}}</h1>
+<div class="board">
+  <div *ngFor="let row of board; let rowIndex = index">
+    <div *ngFor="let cell of row; let colIndex = index" class="cell" (click)="makeMove(rowIndex, colIndex)">
+      {{ cell }}
+    </div>
+  </div>
+</div>
+<div *ngIf="winner" class="winner">
+  Player {{ winner }} wins!
+</div>
+<button (click)="resetGame()">Reset Game</button>
