@@ -33,3 +33,8 @@
 .nav a:hover {
   text-decoration: underline;
 }
+
+.nav a.active{
+  font-weight: bolder;
+  text-decoration: underline;
+}

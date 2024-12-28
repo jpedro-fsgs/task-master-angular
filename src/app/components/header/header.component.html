@@ -1,11 +1,11 @@
 <header class="header">
     <div class="container">
-        <h1 class="logo">Minha Aplicação</h1>
+        <h1 class="logo">{{title()}}</h1>
         <nav class="nav">
             <ul>
-                <li><a routerLink="/">Home</a></li>
-                <li><a routerLink="/counter">Counter</a></li>
-                <li><a routerLink="/tictactoe">Tic Tac Toe</a></li>
+                <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
+                <li><a routerLink="/counter" routerLinkActive="active">Counter</a></li>
+                <li><a routerLink="/tictactoe" routerLinkActive="active">Tic Tac Toe</a></li>
             </ul>
         </nav>
     </div>

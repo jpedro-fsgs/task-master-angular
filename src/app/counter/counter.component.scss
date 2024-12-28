@@ -1,3 +1,11 @@
+div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
 h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
@@ -7,7 +15,7 @@ h2 {
   padding: 0.5rem 1rem;
   font-size: 1rem;
   color: #fff;
-  background-color: #007bff;
+  background-color: #7700ff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -15,7 +23,7 @@ h2 {
 }
 
 .increment-button:hover {
-  background-color: #0056b3;
+  background-color: #6f007ebe;
 }
 
 .increment-button:active {
