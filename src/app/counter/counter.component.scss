@@ -1,0 +1,23 @@
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.increment-button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+.increment-button:hover {
+  background-color: #0056b3;
+}
+
+.increment-button:active {
+  transform: scale(0.95);
+}
