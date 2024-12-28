@@ -10,6 +10,14 @@ export class CounterComponent {
   counter = signal(0);
 
   increment() {
-    this.counter.set(this.counter() + 1);
+    this.counter.update(c => c + 1);
+  }
+
+  decrement() {
+    this.counter.update(c => c - 1);
+  }
+
+  reset() {
+    this.counter.set(0);
   }
 }

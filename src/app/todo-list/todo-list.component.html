@@ -1,0 +1,20 @@
+<main class="container">
+    <h1>Todo List</h1>
+    <div>
+        <input [(ngModel)]="todoInput" type="text" />
+        <button class="add-button" (click)="addTodo()" [disabled]="!todoInput.trim()"><mat-icon>add</mat-icon></button>
+    </div>
+    <div class="box">
+        @if (todoItems().length === 0){
+            <p>No todo items</p>
+        }
+        @for (todo of todoItems(); track todo.id){
+            <div>
+                <p>{{$index + 1}} - {{todo.title}}</p>
+                <button class="remove-button" (click)="removeTodo(todo.id)">
+                    <mat-icon>remove</mat-icon>
+                </button>
+            </div>
+        }
+    </div>
+</main>

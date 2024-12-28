@@ -1,0 +1,66 @@
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+input {
+    width: calc(100% - 50px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.add-button {
+    padding: 10px;
+    margin-left: 10px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.remove-button {
+    padding: 10px;
+    margin-left: 10px;
+    border: none;
+    background-color: #ff2340;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[disabled] {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+.box{
+    display: block;
+    max-height: 60vh;
+    overflow: auto;
+}
+
+p {
+    margin: 0;
+    font-size: 16px;
+}
+
+mat-icon {
+    vertical-align: middle;
+}

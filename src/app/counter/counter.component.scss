@@ -6,6 +6,11 @@ div{
   height: 100%;
 }
 
+span{
+  display: flex;
+  gap: 1rem;
+}
+
 h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
@@ -21,11 +26,31 @@ h2 {
   cursor: pointer;
   transition: background-color 0.3s, transform 0.1s;
 }
-
-.increment-button:hover {
-  background-color: #6f007ebe;
+.decrement-button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #c999ff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+.reset-button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #b90000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
 }
 
-.increment-button:active {
+button:hover {
+  background-color: #1b001fbe;
+}
+
+button:active {
   transform: scale(0.95);
 }

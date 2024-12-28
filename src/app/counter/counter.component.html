@@ -1,4 +1,8 @@
 <div>
     <h2>Contador: {{ counter() }}</h2>
-    <button (click)="increment()" class="increment-button">Incrementar</button>
+    <span>
+        <button (click)="reset()" class="reset-button">Resetar</button>
+        <button (click)="decrement()" class="decrement-button">Decrementar</button>
+        <button (click)="increment()" class="increment-button">Incrementar</button>
+    </span>
 </div>
