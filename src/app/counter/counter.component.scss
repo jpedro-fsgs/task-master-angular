@@ -11,6 +11,12 @@ span{
   gap: 1rem;
 }
 
+@media (max-width: 768px){
+  span{
+    flex-direction: column;
+  }
+}
+
 h2 {
   font-size: 2rem;
   margin-bottom: 1rem;

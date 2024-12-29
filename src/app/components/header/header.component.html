@@ -3,11 +3,22 @@
         <h1 class="logo">{{title()}}</h1>
         <nav class="nav">
             <ul>
-                <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
-                <li><a routerLink="/counter" routerLinkActive="active">Counter</a></li>
-                <li><a routerLink="/tictactoe" routerLinkActive="active">Tic Tac Toe</a></li>
-                <li><a routerLink="/todolist" routerLinkActive="active">Todo List</a></li>
-                <li><a routerLink="/projects" routerLinkActive="active">Projects</a></li>
+                <li><a routerLink="/" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{ exact: true }"><mat-icon>home</mat-icon>
+                        <p>Home</p>
+                    </a></li>
+                <li><a routerLink="/counter" routerLinkActive="active"><mat-icon>functions</mat-icon>
+                        <p>Counter</p>
+                    </a></li>
+                <li><a routerLink="/tictactoe" routerLinkActive="active"><mat-icon>close</mat-icon>
+                        <p>Tic Tac Toe</p>
+                    </a></li>
+                <li><a routerLink="/todolist" routerLinkActive="active"><mat-icon>lists</mat-icon>
+                        <p>Todo List</p>
+                    </a></li>
+                <li><a routerLink="/projects" routerLinkActive="active"><mat-icon>description</mat-icon>
+                        <p>Projects</p>
+                    </a></li>
             </ul>
         </nav>
     </div>

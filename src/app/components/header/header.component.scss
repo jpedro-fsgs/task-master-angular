@@ -13,6 +13,20 @@
   padding: 0 1rem;
 }
 
+@media (max-width: 768px) {
+  h1 {
+    text-align: center;
+  }
+
+  .nav ul{
+    justify-content: start;
+  }
+
+  .nav p {
+    display: none;
+  }
+}
+
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
@@ -22,19 +36,23 @@
   list-style: none;
   display: flex;
   gap: 1rem;
+  align-items: baseline;
 }
 
 .nav a {
   color: white;
   text-decoration: none;
   font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
 }
 
 .nav a:hover {
   text-decoration: underline;
 }
 
-.nav a.active{
+.nav a.active {
   font-weight: bolder;
   text-decoration: underline;
 }
