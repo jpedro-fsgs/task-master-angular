@@ -16,7 +16,7 @@ export class Project {
     descricao: string;
     link: string;
     criacao: Date;
-    prazo: Date;
+    prazo: Date | null;
     is_concluido: boolean;
     usuario: string;
     usuario_id: number;
@@ -27,7 +27,7 @@ export class Project {
         this.descricao = data.descricao;
         this.link = data.link;
         this.criacao = new Date(data.criacao);
-        this.prazo = new Date(data.prazo);
+        this.prazo = data.prazo ? new Date(data.prazo) : null;
         this.is_concluido = data.is_concluido;
         this.usuario = data.usuario;
         this.usuario_id = data.usuario_id;
