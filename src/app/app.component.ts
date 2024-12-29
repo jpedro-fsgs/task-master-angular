@@ -7,7 +7,7 @@ import { RouterOutlet } from '@angular/router';
   imports: [HeaderComponent, RouterOutlet],
   styleUrl: './app.component.scss',
   template: `
-    <app-header [title]="'Vai Corinthians'" />
+    <app-header [title]="'Task Master'" />
     <div class="page-content">
       <router-outlet />
     </div>

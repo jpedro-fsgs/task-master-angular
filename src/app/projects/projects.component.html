@@ -1,0 +1,18 @@
+<main class="container">
+    <h1>Public Projects</h1>
+    @for (project of projectItems(); track project.id) {
+    <div class="project-card">
+        <h3 class="title">{{ project.nome }}
+            @if(project.is_concluido){
+            <mat-icon>check_circle</mat-icon>
+            }
+        </h3>
+        <p>{{ project.descricao }}</p>
+        <p><strong>Link:</strong> <a [href]="project.link" target="_blank">{{ project.link }}</a></p>
+        <p><strong>Created:</strong> {{ project.criacao.toLocaleDateString() }}</p>
+        <p><strong>Due:</strong> {{ project.prazo.toLocaleDateString() }}</p>
+        <p><strong>Completed:</strong> {{ project.is_concluido ? 'Yes' : 'No' }}</p>
+        <p><strong>User:</strong> {{ project.usuario }}</p>
+    </div>
+    }
+</main>

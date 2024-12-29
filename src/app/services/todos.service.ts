@@ -6,9 +6,7 @@ import { Todo } from '../model/todo.type';
 })
 export class TodosService {
   todoItems: Array<Todo> = [
-    { id: 1, title: 'Buy Milk', completed: false },
-    { id: 2, title: 'Buy Bread', completed: false },
-    { id: 3, title: 'Buy Butter', completed: false },
+    { id: 1, title: 'Add a Task', completed: false },
   ];
 
   constructor() {}
