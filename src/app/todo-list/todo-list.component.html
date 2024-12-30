@@ -1,7 +1,7 @@
 <main class="container">
     <h1>Todo List</h1>
     <div>
-        <input [(ngModel)]="todoInput" type="text" />
+        <input class="todo-input" [(ngModel)]="todoInput" type="text" (keyup)="onKeyUp($event)"/>
         <button class="add-button" (click)="addTodo()" [disabled]="!todoInput.trim()"><mat-icon>add</mat-icon></button>
     </div>
     <div class="box">
@@ -9,8 +9,9 @@
             <p>No todo items</p>
         }
         @for (todo of todoItems(); track todo.id){
-            <div>
-                <p>{{$index + 1}} - {{todo.title}}</p>
+            <div appHighlightCompletedTodo [isCompleted]="todo.completed">
+                <input id="todo-checkbox" type="checkbox" [checked]="todo.completed" (change)="toggleTodoCompletion(todo.id)"/>
+                <label for="todo-checkbox"><p>{{todo.title}}</p></label>
                 <button class="remove-button" (click)="removeTodo(todo.id)">
                     <mat-icon>remove</mat-icon>
                 </button>

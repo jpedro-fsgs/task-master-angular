@@ -3,10 +3,11 @@ import { FormsModule } from '@angular/forms';
 import { TodosService } from '../services/todos.service';
 import { Todo } from '../model/todo.type';
 import { MatIconModule } from '@angular/material/icon';
+import { HighlightCompletedTodoDirective } from '../directives/highlight-completed-todo.directive';
 
 @Component({
   selector: 'app-todo-list',
-  imports: [FormsModule, MatIconModule],
+  imports: [FormsModule, MatIconModule, HighlightCompletedTodoDirective],
   templateUrl: './todo-list.component.html',
   styleUrl: './todo-list.component.scss',
 })
@@ -31,6 +32,12 @@ export class TodoListComponent implements OnInit {
     this.todoService.addTodo(newTodo);
     this.todoItems.set(this.todoService.todoItems);
     this.todoInput = '';
+  }
+
+  onKeyUp(event: KeyboardEvent) {
+    if(event.key === 'Enter') {
+      this.addTodo();
+    }
   }
 
   removeTodo(id: number): void {
